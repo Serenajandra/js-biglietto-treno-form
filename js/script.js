@@ -16,18 +16,37 @@
 // ticketPrice?
 
 // Quanti km?
-const userKm = parseFloat(document.getElementById(`userkm`));
-console.log (userKm, typeof(userKm));
+const userKmInput = document.getElementById(`userkm`);
+console.log (userKmInput, typeof(userKmInput));
 
-// Eta?
-const userAge = parseInt(document.getElementById(`userage`));
-console.log (userAge);
+// Attribuisco una variabile al bottone
+const submitBtnKm = document.getElementById(`submitkm`);
 
-// Prezzo senza sconto
-const kmPrice = 0.21.toFixed(2);
+// Click sul bottone
+submitBtnKm.addEventListener(`click`, function(){
+    // Prendo il valore dell'input
+    const userKm = userKmInput.value;
+    console.log (userKm);
+});
 
-const ticketPrice = (userKm * kmPrice).toFixed(2);
-console.log (ticketPrice);
+ // Eta?
+const userAgeInput = document.getElementById(`userage`);
+console.log (userAgeInput, typeof(userAgeInput));
+
+// Attribuisco una variabile al bottone
+const submitBtnAge = document.getElementById(`submitage`);
+
+// Click sul bottone
+submitBtnAge.addEventListener(`click`, function(){
+    // Prendo il valore dell'input
+    const userAge = userAgeInput.value;
+    console.log (userAge);
+})
+// // Prezzo senza sconto
+// const kmPrice = 0.21.toFixed(2);
+
+// const ticketPrice = (userKm * kmPrice).toFixed(2);
+// console.log (ticketPrice);
 
 // Prezzo con sconto applicato
 
