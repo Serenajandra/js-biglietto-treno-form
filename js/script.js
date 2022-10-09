@@ -29,7 +29,7 @@ console.log (userKmInput, typeof(userKmInput));
 
 // Prezzo al km senza sconto
 const kmPrice = 0.21.toFixed(2);
-
+console.log (typeof(kmPrice));
 const submitPrice = document.getElementById(`submitkm`);
 
 // click sul bottone baseprice
@@ -38,7 +38,7 @@ submitPrice.addEventListener(`click`, function(){
     console.log (user_Km);
 
     //    Calcolo del prezzo base
-    const ticket_BasePrice = parseInt((user_Km * kmPrice).toFixed(2));
+    const ticket_BasePrice = parseInt(user_Km * kmPrice).toFixed(2);
     console.log (typeof(ticket_BasePrice));
     
     // Comunico il prezzo base
@@ -71,12 +71,15 @@ submitBtnAge.addEventListener(`click`, function(){
         console.log(ticketPriceUnder18);
         const finalPrice = document.querySelector("div.price_age");
         finalPrice.innerHTML += `<h3> Grazie allo sconto under18, il prezzo del tuo biglietto è ${ticketPriceUnder18}€</h3>`;
-    } if(user_Age > 65) {
+    } else if(user_Age > 65) {
         const ticketPriceOver65 = (ticket_BasePrice * 0.60).toFixed(2);
         console.log(ticketPriceOver65);
         const finalPrice = document.querySelector("div.price_age");
-        finalPrice.innerHTML += `<h3> Grazie allo sconto over65, il prezzo del tuo biglietto è $${ticketPriceOver65}€</h3>`;
+        finalPrice.innerHTML += `<h3> Grazie allo sconto over65, il prezzo del tuo biglietto è ${ticketPriceOver65}€</h3>`;
 
+    } if((user_Age) > 18 && (user_Age) < 65 ){
+        const finalPrice = document.querySelector("div.price_age");
+        finalPrice.innerHTML += `<p>Purtroppo non puoi usufruire di sconti correlati all'età... ti auguriamo una vita lunga e felice così ne potremo riparlare tra qualche anno. Buon viaggio!</p>`
     }
 });
 
