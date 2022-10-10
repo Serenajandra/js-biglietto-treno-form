@@ -1,0 +1,16 @@
+.container{
+    background-color: rgb(238, 130, 206);
+    min-height: 400px;
+    margin-top: 4rem;
+}
+.title{
+    padding: 2rem;
+    vertical-align: middle;
+    background-color: rgb(247, 0, 255);
+    border: 2px solid rgb(191, 0, 255);
+    width: 100%;   
+}
+ #userkm{
+    margin-left: 2rem;
+    vertical-align: middle;
+ }
